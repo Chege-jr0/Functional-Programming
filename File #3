@@ -1,0 +1,16 @@
+//Using currying to perform an add operation
+function add(x) {
+  // Return a function that takes in the next parameter(y)
+ return function(y){
+   //Returns a function that takes in the next parameter z
+   return function(z){
+     //Returns a function taht performs the addition
+       return x + y + z;
+   };
+
+ };
+
+}
+
+const result = add(40)(20)(30);
+console.log(result);
